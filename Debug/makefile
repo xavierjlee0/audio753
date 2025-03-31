@@ -64,8 +64,8 @@ all: main-build
 main-build: DAC_Single_753.elf secondary-outputs
 
 # Tool invocations
-DAC_Single_753.elf DAC_Single_753.map: $(OBJS) $(USER_OBJS) C:\Users\xavie\Documents\STM32\DAC_Single_753\STM32H753ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "DAC_Single_753.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\xavie\Documents\STM32\DAC_Single_753\STM32H753ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DAC_Single_753.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+DAC_Single_753.elf DAC_Single_753.map: $(OBJS) $(USER_OBJS) F:\BortonLab\audio753\audio753\STM32H753ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "DAC_Single_753.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"F:\BortonLab\audio753\audio753\STM32H753ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DAC_Single_753.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
